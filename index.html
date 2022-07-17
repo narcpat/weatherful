@@ -29,32 +29,100 @@
   <!-- END of SEARCH -->
 
   <!-- HISTORY section -->
-    <div id="search-history" class="searched-cities-list">
-
+  <h2 class="mt-4">Search History</h2>
+  <div class="card mt-2" id="search-history">
+    <div class="card-body" id="history-container">
     </div>
+  </div>
   <!-- END or HISTORY -->
 
   </header>
 <!-- END of HEADER -->
 
 <!-- RESULTS section -->
-  <main class="col-12 col-lg-9 d-flex flex-column ">
+  <main class="row m-3">
+    <div class="results m-3">
   <!-- CURRENT DAY section -->
-    <div class="m-2 mt-4 row col-5">
-      <div id="current-weather">
-        <div class="current-city"></div>
-        <div id="currentCityInfo"></div>
-      </div>
-      <div class="weather-icon col-4"></div>
-    </div>
+    <h3>Weather today:</h3>
+            <div class="card m-2">
+                <div class="card-body contrast">
+                    <h3 class="card-title" id="chosenCity-currentDate"></h3>
+                    <img id="currentDay-icon" src=""></img>
+                    <p class="card-text">Temp: <span id="current-temp"></span> &#8451;</p>
+                    <p class="card-text">Wind: <span id="current-wind"></span> m/s</p>
+                    <p class="card-text">Humidity: <span id="current-humidity"></span>%</p>
+                    <p class="card-text">UV Index: <span id="current-uv"></span></p>
+                </div>
+            </div>
   <!-- END of CURRENT DAY -->
   
   <!-- FIVE DAYS section -->
-    <div class="d-flex">
-      <div id="five-days" class="col-12 col-lg-9 flex-column">
-
-      </div>
+  <h3>Five Day Forecast</h3>
+  <div class="row">
+    
+    <div class="5days-content">
+        <div class="card">
+            <div class="card-body contrast">
+                <h4 class="card-title days" id="day1"></h4>
+                <img class="weather-icon" src=""></img>
+                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+            </div>
+        </div>
     </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body contrast">
+                <h4 class="card-title days" id="day2"></h4>
+                <img class="weather-icon" src=""></img>
+                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body contrast">
+                <h4 class="card-title days" id="day3"></h4>
+                <img class="weather-icon" src=""></img>
+                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body contrast">
+                <h4 class="card-title days" id="day4"></h4>
+                <img class="weather-icon" src=""></img>
+                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body contrast">
+                <h4 class="card-title days" id="day5"></h4>
+                <img class="weather-icon" src=""></img>
+                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
   <!-- END of FIVE DAYS -->
   </main>
 <!-- END of RESULTS -->
