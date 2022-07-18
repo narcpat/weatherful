@@ -19,13 +19,13 @@
   <!-- END of LOGO -->
 
   <!-- SEARCH section -->
-    <h3>Search for a City:</h3>
-    <div class="search-field">
-      <input class="form-control" type="text" placeholder="Enter city name">
-      <button id="search-btn" type="button" class="btn btn-primary btn-lg btn-block mt-3">
-        <span class="oi oi-magnifying-glass"></span>Search
-      </button>
-    </div>
+  <div class="card">
+    <h3 class="card-header text-uppercase">Search By City</h3>
+    <form id="search-input" class="card-body">
+      <input class="form-control" name="city" id="city-name" type="text" autofocus="true" placeholder="Enter City Name"/>
+      <button type="submit" class="mt-2 btn-lg btn-primary form-control">Search</button>
+    </form>
+  </div>
   <!-- END of SEARCH -->
 
   <!-- HISTORY section -->
@@ -41,17 +41,17 @@
 
 <!-- RESULTS section -->
   <main class="row m-3">
-    <div class="results m-3">
+    <div class="weather results m-3">
   <!-- CURRENT DAY section -->
     <h3>Weather today:</h3>
             <div class="card m-2">
                 <div class="card-body contrast">
-                    <h3 class="card-title" id="chosenCity-currentDate"></h3>
+                    <h3 class="card-title" id="chosenCity-date"></h3>
                     <img id="currentDay-icon" src=""></img>
                     <p class="card-text">Temp: <span id="current-temp"></span> &#8451;</p>
                     <p class="card-text">Wind: <span id="current-wind"></span> m/s</p>
                     <p class="card-text">Humidity: <span id="current-humidity"></span>%</p>
-                    <p class="card-text">UV Index: <span id="current-uv"></span></p>
+                    <p class="card-text">UV Index: <span id="current-uv-index"></span></p>
                 </div>
             </div>
   <!-- END of CURRENT DAY -->
@@ -59,27 +59,27 @@
   <!-- FIVE DAYS section -->
   <h3>Five Day Forecast:</h3>
   
-    <div class="row 5days-content">
-      <div class="col">
-        <div class="card">
-            <div class="card-body contrast">
-                <h4 class="card-title days" id="day1"></h4>
-                <img class="weather-icon" src=""></img>
-                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
-                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
-                <p class="card-text">Humidity: <span class="humids"></span>%</p>
-            </div>
-        </div>
-    </div>
+  <div class="row fiveDays-content">
+        <div class="col">
+          <div class="card">
+              <div class="card-body contrast">
+                  <h4 class="card-title day" id="day1"></h4>
+                  <img class="weather-icon" src=""></img>
+                  <p class="card-text">Temp: <span class="temp"></span> &#8451;</p>
+                  <p class="card-text">Wind: <span class="wind"></span> m/s</p>
+                  <p class="card-text">Humidity: <span class="humidity"></span>%</p>
+              </div>
+          </div>
+      </div>
 
       <div class="col">
         <div class="card">
             <div class="card-body contrast">
-                <h4 class="card-title days" id="day2"></h4>
+                <h4 class="card-title day" id="day2"></h4>
                 <img class="weather-icon" src=""></img>
-                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
-                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
-                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+                <p class="card-text">Temp: <span class="temp"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="wind"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humidity"></span>%</p>
             </div>
         </div>
       </div>
@@ -87,11 +87,11 @@
       <div class="col">
         <div class="card">
             <div class="card-body contrast">
-                <h4 class="card-title days" id="day3"></h4>
+                <h4 class="card-title day" id="day3"></h4>
                 <img class="weather-icon" src=""></img>
-                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
-                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
-                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+                <p class="card-text">Temp: <span class="temp"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="wind"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humidity"></span>%</p>
             </div>
         </div>
       </div>
@@ -99,11 +99,11 @@
       <div class="col">
         <div class="card">
             <div class="card-body contrast">
-                <h4 class="card-title days" id="day4"></h4>
+                <h4 class="card-title day" id="day4"></h4>
                 <img class="weather-icon" src=""></img>
-                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
-                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
-                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+                <p class="card-text">Temp: <span class="temp"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="wind"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humidity"></span>%</p>
             </div>
         </div>
       </div>
@@ -111,16 +111,16 @@
       <div class="col">
         <div class="card">
             <div class="card-body contrast">
-                <h4 class="card-title days" id="day5"></h4>
+                <h4 class="card-title day" id="day5"></h4>
                 <img class="weather-icon" src=""></img>
-                <p class="card-text">Temp: <span class="temps"></span> &#8451;</p>
-                <p class="card-text">Wind: <span class="winds"></span> m/s</p>
-                <p class="card-text">Humidity: <span class="humids"></span>%</p>
+                <p class="card-text">Temp: <span class="temp"></span> &#8451;</p>
+                <p class="card-text">Wind: <span class="wind"></span> m/s</p>
+                <p class="card-text">Humidity: <span class="humidity"></span>%</p>
             </div>
         </div>
       </div>
+
   </div>  
-
 
 </div>
   <!-- END of FIVE DAYS -->
@@ -129,7 +129,7 @@
   </div>
 <!-- CDNs/LINKS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
