@@ -11,7 +11,6 @@ var tempEl = document.querySelectorAll(".temp");
 var windEl = document.querySelectorAll(".wind");
 var humidityEl = document.querySelectorAll(".humidity");
 var weatherIconsEl = document.querySelectorAll(".weather-icon");
-var searchHistoryEl = document.querySelector("#history-container");
 var cityLocationsArr = [];
 
 // to get location info
