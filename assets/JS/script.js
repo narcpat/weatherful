@@ -1,10 +1,10 @@
 var searchInputEl = document.querySelector("#search-input");
 var cityInputEl = document.querySelector("#city-name");
-var displayCityDate = document.querySelector("#chosenCity-date");
+var displayCityInfo = document.querySelector("#chosenCity-date");
 var displayCurrentTemp = document.querySelector("#current-temp");
 var displayCurrentWind = document.querySelector("#current-wind");
-var displayCurrentHumid = document.querySelector("#current-humidity");
-var displayCurrentUv = document.querySelector("#current-uv-index");
+var displayCurrentHumidity = document.querySelector("#current-humidity");
+var displayCurrentUvIndex = document.querySelector("#current-uv-index");
 var displayCurrentIcon = document.querySelector("#currentDay-icon");
 var dayEl = document.querySelectorAll(".day");
 var tempEl = document.querySelectorAll(".temp");
@@ -31,7 +31,7 @@ var getCityData = function (city) {
           var cityLon = data[0].lon;
 
           saveLocationInfo(cityName);
-          getWeatherInfo(cityLat, cityLon, cityName);
+          getWeatherInfo(cityName, cityLat, cityLon);
         }
       });
     })
@@ -57,6 +57,7 @@ var getWeatherInfo = function (cityName, cityLat, cityLon) {
       var currentHumidity = data.current.humidity;
       var currentUvIndex = data.current.uvIndex;
       var currentIcon = data.current.weather[0].icon;
+      var currentDate = moment().format("DD/MM/YYYY");
 
       displayCityInfo.textContent = cityName + " (" + currentDate + ")";
       displayCurrentTemp.textContent = currentTemp;
@@ -74,7 +75,6 @@ var getWeatherInfo = function (cityName, cityLat, cityLon) {
         var fiveDayWind = data.daily[i].wind;
         var fiveDayHumidity = data.daily[i].humidity;
         var fiveDayIcons = data.daily[i].weather[0].icon;
-        var currentDate = moment().format("DD/MM/YYYY");
 
         dayEl[i - 1].textContent = fiveDayDate;
         tempEl[i - 1].textContent = fiveDayTemp;
