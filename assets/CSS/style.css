@@ -5,7 +5,9 @@ h3 {
 /* END of GLOBAL styles */
 
 /* HEADER styles */
-
+#Search-Title {
+  color: cornflowerblue;
+}
 /* END of HEADER styles */
 
 /* RESULTS styles */
