@@ -16,7 +16,7 @@ var cityLocationsArr = [];
 // to get location info
 var getCityData = function (city) {
   var locationApi =
-    "https://api.openweathermap.org/geo/1.0/direct?q=" +
+    "http://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&appid=ed4b8cae65f4f820c783f37bd8790a8e";
 
@@ -44,7 +44,7 @@ var getCityData = function (city) {
 // to get weather info based on location
 var getWeatherInfo = function (cityName, cityLat, cityLon) {
   var weatherApi =
-    "https://api.openweathermap.org/data/3.0/onecall?lat=" +
+    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
     cityLat +
     "&lon=" +
     cityLon +
@@ -72,16 +72,16 @@ var getWeatherInfo = function (cityName, cityLat, cityLon) {
 
         var fiveDayTemp = data.daily[i].temp.day;
         var fiveDayWind = data.daily[i].wind;
-        var fiveDayHumid = data.daily[i].humidity;
-        var fiveDayIcon = data.daily[i].weather[0].icon;
+        var fiveDayHumidity = data.daily[i].humidity;
+        var fiveDayIcons = data.daily[i].weather[0].icon;
         var currentDate = moment().format("DD/MM/YYYY");
 
         dayEl[i - 1].textContent = fiveDayDate;
         tempEl[i - 1].textContent = fiveDayTemp;
         windEl[i - 1].textContent = fiveDayWind;
-        humidityEl[i - 1].textContent = fiveDayHumid;
+        humidityEl[i - 1].textContent = fiveDayHumidity;
         weatherIconsEl[i - 1].src =
-          "https://openweathermap.org/img/wn/" + fiveDayIcon + ".png";
+          "https://openweathermap.org/img/wn/" + fiveDayIcons + ".png";
       }
     });
   });
