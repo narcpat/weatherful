@@ -16,7 +16,7 @@ var cityLocationsArr = [];
 // to get location info
 var getCityData = function (city) {
   var locationApi =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&appid=ed4b8cae65f4f820c783f37bd8790a8e";
 
